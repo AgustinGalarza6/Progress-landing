@@ -1,24 +1,25 @@
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, Phone } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = {
     servicios: [
-        { label: "Desarrollo Web", href: "#" },
-        { label: "Apps Móviles", href: "#" },
-        { label: "Integración IA", href: "#" },
-        { label: "Consultoría", href: "#" },
+        { label: "Sistemas a Medida", href: "#servicios" },
+        { label: "Integración de Ecosistemas", href: "#servicios" },
+        { label: "Automatización de Procesos", href: "#servicios" },
+        { label: "PIL Access", href: "#servicios" },
+        { label: "PIL Soft", href: "#servicios" },
     ],
     empresa: [
-        { label: "Sobre Nosotros", href: "#" },
-        { label: "Proyectos", href: "#" },
-        { label: "Blog", href: "#" },
-        { label: "Carreras", href: "#" },
+        { label: "Por qué elegirnos", href: "#porque-elegirnos" },
+        { label: "Nuestro Método", href: "#nuestrometodo" },
+        { label: "Casos de éxito", href: "#exito" },
+        { label: "Contacto", href: "#contacto" },
     ],
     legal: [
         { label: "Política de Privacidad", href: "#" },
         { label: "Términos de Servicio", href: "#" },
     ],
-    };
+};
 
     const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
@@ -36,21 +37,26 @@ export default function Footer() {
             <div className="lg:col-span-2">
                 <Link href="/" className="flex items-center mb-6">
                 <img 
-                    src="/background/logo/logo-final-png-p10v44ze70il2vzkwoprdvo9o3gj73hq7lhjb3roa8.png" 
+                    src="/logos/logo/logo_color.png" 
                     alt="Progress in line" 
-                    className="h-20 w-auto"
+                    className="h-24 w-auto"
                 />
                 </Link>
                 <p className="text-gray-400 mb-6 max-w-sm">
                 Transformamos ideas en soluciones digitales de alto impacto utilizando tecnologías modernas e IA.
                 </p>
                 <div className="flex gap-4">
-                {socialLinks.map((social) => (
+                {[
+                    { icon: Phone, href: 'https://wa.me/5491138923268', label: 'WhatsApp' },
+                    ...socialLinks
+                ].map((social) => (
                     <a
                     key={social.label}
                     href={social.href}
                     className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all"
                     aria-label={social.label}
+                    target="_blank"
+                    rel="noreferrer"
                     >
                     <social.icon className="w-5 h-5" />
                     </a>
@@ -73,7 +79,7 @@ export default function Footer() {
             </div>
 
             <div>
-                <h4 className="text-white font-semibold mb-4">Empresa</h4>
+                <h4 className="text-white font-semibold mb-4">Enlaces rápidos</h4>
                 <ul className="space-y-3">
                 {footerLinks.empresa.map((link) => (
                     <li key={link.label}>

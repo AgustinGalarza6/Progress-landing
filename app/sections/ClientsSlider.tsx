@@ -4,14 +4,8 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 const logos = [
-    { name: "Shopery", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" }, // Sustituir por tus logos locales
-    { name: "solu.", url: "" },
-    { name: "STANLEY", url: "" },
-    { name: "Universidad Central", url: "" },
-    { name: "Adidas", url: "" },
-    { name: "DELL", url: "" },
-    { name: "FIAT", url: "" },
-    { name: "Flecha Bus", url: "" },
+    { name: "Sakya Tec", url: "/clients_slider/sakya_tec.png" },
+    { name: "Comahue", url: "/clients_slider/comahue_alarmas.png" },
 ];
 
 export default function ClientsSlider() {
@@ -51,9 +45,9 @@ export default function ClientsSlider() {
                 >
                 {/* Si tienes las imágenes, usa <img />. Si no, el nombre con fuente Host Grotesk */}
                 {logo.url ? (
-                    <img src={logo.url} alt={logo.name} className="h-6 md:h-8 w-auto object-contain" />
+                    <img src={logo.url} alt={logo.name} className="h-32 md:h-48 w-auto object-contain" />
                 ) : (
-                    <span className="text-xl md:text-2xl font-bold tracking-tighter text-white uppercase italic">
+                    <span className="text-4xl md:text-7xl font-bold tracking-tighter text-white uppercase italic">
                     {logo.name}
                     </span>
                 )}

@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const navLinks = [
     { href: "#servicios", label: "Servicios" },
+    { href: "#nuestrometodo", label: "Nuestro Método" },
     { href: "#exito", label: "Casos de éxito" },
-    { href: "#blog", label: "Blog" },
-    { href: "#nosotros", label: "Nosotros" },
+    { href: "#porque-elegirnos", label: "Por qué elegirnos" },
 ];
 
 export default function Navbar() {
@@ -33,9 +33,9 @@ export default function Navbar() {
             {/* Logo Progress in line */}
             <Link href="/" className="flex items-center gap-2 group">
             <img 
-                src="/background/logo/logo-final-png-p10v44ze70il2vzkwoprdvo9o3gj73hq7lhjb3roa8.png" 
+                src="/logos/logo/logo_color.png" 
                 alt="Progress in line" 
-                className="h-16 w-auto"
+                className="h-24 w-auto"
             />
             </Link>
 
@@ -51,10 +51,9 @@ export default function Navbar() {
                 </Link>
             ))}
             <div className="h-4 w-[1px] bg-white/20 mx-2"></div>
-            <button className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Idioma</button>
-            <button className="border border-white/40 px-5 py-2 rounded-md text-sm font-medium hover:bg-white hover:text-black transition-all">
+            <a href="https://wa.me/5491138923268" target="_blank" rel="noreferrer" className="border border-white/40 px-5 py-2 rounded-md text-sm font-medium hover:bg-white hover:text-black transition-all">
                 Contacto
-            </button>
+            </a>
             </div>
 
             {/* Mobile Button */}
@@ -64,14 +63,14 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
+            {isMobileMenuOpen && (
             <div className="md:hidden bg-black absolute top-full left-0 w-full border-b border-white/10 p-6 space-y-4 flex flex-col">
             {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="text-gray-300 text-lg" onClick={() => setIsMobileMenuOpen(false)}>
                 {link.label}
                 </Link>
             ))}
-            <button className="w-full py-3 bg-white text-black font-bold rounded-md">Contacto</button>
+            <a href="https://wa.me/5491138923268" target="_blank" rel="noreferrer" className="w-full py-3 bg-white text-black font-bold rounded-md text-center" onClick={() => setIsMobileMenuOpen(false)}>Contacto</a>
             </div>
         )}
         </nav>

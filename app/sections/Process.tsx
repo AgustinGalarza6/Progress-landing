@@ -49,7 +49,7 @@ const processSteps = [
 
 export default function Process() {
     return (
-        <section id="proceso" className="py-24 bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
+        <section id="nuestrometodo" className="py-24 bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 mb-16">
             <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -4,17 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
-        <section id="inicio" className="relative min-h-[90vh] flex flex-col bg-black overflow-hidden pt-20">
-        {/* Glow de fondo calibrado en Azul Acero para un perfil técnico */}
-        <div className="absolute inset-0 pointer-events-none">
-            <div 
-            className="absolute top-[-15%] left-1/2 -translate-x-1/2 w-[140%] h-[600px] opacity-30 blur-[120px]"
-            style={{
-                background: 'radial-gradient(circle, #6B9FF0 0%, #2d4a7a 50%, transparent 70%)',
-                borderRadius: '50% 50% 0 0'
-            }}
-            />
-        </div>
+        <section id="inicio" className="relative min-h-[90vh] flex flex-col overflow-hidden pt-20" style={{ background: 'url(/background/hero_background.jpg) center/cover no-repeat, #0a0a0a' }}>
 
         <div className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 text-center max-w-7xl mx-auto">
             <motion.div
@@ -36,9 +26,11 @@ export default function Hero() {
             </p>
 
             {/* Botón: Tono de consultoría especializada */}
-            <button className="px-10 py-3.5 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all active:scale-95 text-sm tracking-tight">
-                Consultoría técnica
-            </button>
+            <a href="#contacto">
+                <button className="px-8 py-2.5 bg-white text-black font-bold rounded-xl shadow-lg hover:bg-gray-100 transition-all active:scale-97 text-lg tracking-tight antialiased border border-black/10">
+                    Hablar con un asesor
+                </button>
+            </a>
             </motion.div>
         </div>
         </section>
