@@ -5,11 +5,12 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-    { href: "#servicios", label: "Servicios" },
-    { href: "#productos", label: "Productos" },
-    { href: "#nuestrometodo", label: "Nuestro método" },
-    { href: "#exito", label: "Casos de éxito" },
-    { href: "#porque-elegirnos", label: "Por qué elegirnos" },
+    { href: "/#servicios", label: "Servicios" },
+    { href: "/#productos", label: "Productos" },
+    { href: "/desarrollo-web", label: "Desarrollo Web" },
+    { href: "/#nuestrometodo", label: "Nuestro método" },
+    { href: "/#exito", label: "Casos de éxito" },
+    { href: "/#porque-elegirnos", label: "Por qué elegirnos" },
 ];
 
 export default function Navbar() {
@@ -32,16 +33,16 @@ export default function Navbar() {
         >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
             {/* Logo Progress in Line */}
-            <a href="#inicio" className="flex items-center gap-2 group">
+            <Link href="/#inicio" className="flex items-center gap-2 group">
             <img 
                 src="/logos/logo/logo_color.png" 
                 alt="Progress in Line" 
                 className="h-24 w-auto"
             />
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
                 <Link
                 key={link.href}
@@ -52,26 +53,26 @@ export default function Navbar() {
                 </Link>
             ))}
             <div className="h-4 w-[1px] bg-white/20 mx-2"></div>
-            <a href="https://wa.me/5491138923268" target="_blank" rel="noreferrer" className="border border-white/40 px-5 py-2 rounded-md text-sm font-medium hover:bg-white hover:text-black transition-all">
+            <Link href="/#contacto" className="border border-white/40 px-5 py-2 rounded-md text-sm font-medium hover:bg-white hover:text-black transition-all">
                 Contacto
-            </a>
+            </Link>
             </div>
 
             {/* Mobile Button */}
-            <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <button className="lg:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X /> : <Menu />}
             </button>
         </div>
 
         {/* Mobile Menu */}
             {isMobileMenuOpen && (
-            <div className="md:hidden bg-black absolute top-full left-0 w-full border-b border-white/10 p-6 space-y-4 flex flex-col">
+            <div className="lg:hidden bg-black absolute top-full left-0 w-full border-b border-white/10 p-6 space-y-4 flex flex-col">
             {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="text-gray-300 text-lg" onClick={() => setIsMobileMenuOpen(false)}>
                 {link.label}
                 </Link>
             ))}
-            <a href="https://wa.me/5491138923268" target="_blank" rel="noreferrer" className="w-full py-3 bg-white text-black font-bold rounded-md text-center" onClick={() => setIsMobileMenuOpen(false)}>Contacto</a>
+            <Link href="/#contacto" className="w-full py-3 bg-white text-black font-bold rounded-md text-center" onClick={() => setIsMobileMenuOpen(false)}>Contacto</Link>
             </div>
         )}
         </nav>

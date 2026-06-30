@@ -4,7 +4,7 @@ import Hero from "./sections/Hero";
 import ClientsSlider from "./sections/ClientsSlider";
 import Services from "./sections/Services";
 import Products from "./sections/Products";
-import WebConfigurator from "./sections/WebConfigurator";
+import DevelopmentWebCTA from "./sections/DevelopmentWebCTA";
 import Process from "./sections/Process";
 import Testimonials from "./sections/Testimonials";
 import IsForYou from "./sections/IsForYou";
@@ -20,7 +20,7 @@ export default function Home() {
       <ClientsSlider />
       <Services />
       <Products />
-      <WebConfigurator />
+      <DevelopmentWebCTA />
       <Process />
       <Testimonials />
       <IsForYou />

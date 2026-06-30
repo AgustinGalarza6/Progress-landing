@@ -3,19 +3,20 @@ import Link from "next/link";
 
 const footerLinks = {
     servicios: [
-        { label: "Sistemas a medida", href: "#servicios" },
-        { label: "Integración de ecosistemas", href: "#servicios" },
-        { label: "Automatización de procesos", href: "#servicios" },
+        { label: "Sistemas a medida", href: "/#servicios" },
+        { label: "Integración de ecosistemas", href: "/#servicios" },
+        { label: "Automatización de procesos", href: "/#servicios" },
+        { label: "Desarrollo web", href: "/desarrollo-web" },
     ],
     productos: [
-        { label: "PIL Access", href: "#productos" },
-        { label: "PIL Soft", href: "#productos" },
+        { label: "PIL Access", href: "/#productos" },
+        { label: "PIL Soft", href: "/#productos" },
     ],
     empresa: [
-        { label: "Por qué elegirnos", href: "#porque-elegirnos" },
-        { label: "Nuestro método", href: "#nuestrometodo" },
-        { label: "Casos de éxito", href: "#exito" },
-        { label: "Contacto", href: "#contacto" },
+        { label: "Por qué elegirnos", href: "/#porque-elegirnos" },
+        { label: "Nuestro método", href: "/#nuestrometodo" },
+        { label: "Casos de éxito", href: "/#exito" },
+        { label: "Contacto", href: "/#contacto" },
     ],
     legal: [
         { label: "Política de Privacidad", href: "#" },
