@@ -10,8 +10,8 @@ const hostGrotesk = Host_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Progress in line",
-  description: "Protegemos tu futuro digital con soluciones innovadoras y confiables.",
+  title: "Progress in Line",
+  description: "Desarrollamos software a medida, integraciones y automatización para empresas que necesitan soluciones digitales robustas.",
   icons: {
     icon: [
       { url: "/logos/logo/logo_negro.png", sizes: "64x64", type: "image/png", media: "(prefers-color-scheme: light)" },

@@ -9,7 +9,7 @@ export default function Contact() {
         name: "",
         email: "",
         company: "",
-        type: "Desarrollo a Medida",
+        type: "Desarrollo a medida",
         message: "",
     });
 
@@ -27,7 +27,7 @@ export default function Contact() {
             const json = await res.json();
             if(res.ok && json.ok){
                 setStatus('success');
-                setFormData({ name: '', email: '', company: '', type: 'Desarrollo a Medida', message: '' });
+                setFormData({ name: '', email: '', company: '', type: 'Desarrollo a medida', message: '' });
             }else{
                 setStatus('error');
             }
@@ -46,29 +46,29 @@ export default function Contact() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
-            {/* Info - Estilo Canales de Atencion CTC */}
+            {/* Info - Estilo Canales de Atención CTC */}
             <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
             >
                 <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
-                CANALES DE ATENCION
+                CANALES DE ATENCIÓN
                 </span>
                 <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
                 Hablar con <br />
                 <span className="text-[#6B9FF0] font-normal">un asesor</span>
                 </h2>
                 <p className="text-gray-400 mb-12 text-lg font-light max-w-md">
-                Un asesor de nuestro equipo se pondra en contacto para analizar su requerimiento tecnico de manera personalizada.
+                Un asesor de nuestro equipo se pondrá en contacto para analizar tu requerimiento técnico de manera personalizada.
                 </p>
 
                 <div className="space-y-4">
                 {[
                     { icon: Mail, label: "EMAIL", value: "Pil@progressinline.com" },
-                    { icon: Phone, label: "TELEFONO", value: "+54 9 11 3892-3268" },
+                    { icon: Phone, label: "TELÉFONO", value: "+54 9 11 3892-3268" },
                     { icon: Clock, label: "HORARIO", value: "Lunes a viernes - 9 a 18 hs" },
-                    { icon: MapPin, label: "UBICACION", value: "Av. Regimientos de Patricios 178" },
+                    { icon: MapPin, label: "UBICACIÓN", value: "Av. Regimientos de Patricios 178" },
                 ].map((item) => (
                     <div key={item.label} className="flex items-center gap-4 bg-white/[0.03] border border-white/[0.05] p-4 rounded-2xl hover:bg-white/[0.05] transition-colors">
                     <div className="w-10 h-10 rounded-xl bg-[#6B9FF0]/10 border border-[#6B9FF0]/20 flex items-center justify-center">
@@ -96,18 +96,18 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                    <label className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Nombre Completo *</label>
+                    <label className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Nombre completo *</label>
                     <input
                         type="text"
                         required
                         className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#6B9FF0]/50 transition-all"
-                        placeholder="Ej: Martin Gonzalez"
+                        placeholder="Ej: Martín González"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                     </div>
                     <div>
-                    <label className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Email Corporativo *</label>
+                    <label className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Email corporativo *</label>
                     <input
                         type="email"
                         required
@@ -131,16 +131,16 @@ export default function Contact() {
                     />
                     </div>
                     <div>
-                    <label className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Tipo de Consulta *</label>
+                    <label className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-2">Tipo de consulta *</label>
                     <select 
                         className="w-full px-4 py-3 bg-[#0a0a0a] border border-white/10 rounded-xl text-white focus:outline-none focus:border-[#6B9FF0]/50 transition-all appearance-none"
                         value={formData.type}
                         onChange={(e) => setFormData({ ...formData, type: e.target.value })}
                     >
-                        <option>Desarrollo a Medida</option>
-                        <option>Integracion de Sistemas</option>
-                        <option>Automatizacion / IA</option>
-                        <option>PIL Access / PILSoft</option>
+                        <option>Desarrollo a medida</option>
+                        <option>Integración de sistemas</option>
+                        <option>Automatización / IA</option>
+                        <option>PIL Access / PIL Soft</option>
                     </select>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Contact() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#6B9FF0]/50 transition-all resize-none"
-                    placeholder="Describa brevemente su requerimiento tecnico..."
+                    placeholder="Describí brevemente tu requerimiento técnico..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
@@ -162,7 +162,7 @@ export default function Contact() {
                     className="w-full py-4 bg-[#6B9FF0] text-black rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-[#8bb7f7] transition-all flex items-center justify-center gap-2 group active:scale-95 shadow-[0_0_20px_rgba(107,159,240,0.3)]"
                     disabled={status === 'loading'}
                 >
-                    {status === 'loading' ? 'Enviando...' : 'Solicitar Contacto'}
+                    {status === 'loading' ? 'Enviando...' : 'Solicitar contacto'}
                     <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
 
@@ -171,10 +171,10 @@ export default function Contact() {
                 
                 <div className="flex justify-center gap-6 pt-2">
                     <span className="flex items-center gap-2 text-[9px] text-gray-500 font-bold uppercase tracking-tighter">
-                    <div className="w-1 h-1 rounded-full bg-[#6B9FF0]" /> Atencion Profesional
+                    <div className="w-1 h-1 rounded-full bg-[#6B9FF0]" /> Atención profesional
                     </span>
                     <span className="flex items-center gap-2 text-[9px] text-gray-500 font-bold uppercase tracking-tighter">
-                    <div className="w-1 h-1 rounded-full bg-[#6B9FF0]" /> Asesoramiento Especializado
+                    <div className="w-1 h-1 rounded-full bg-[#6B9FF0]" /> Asesoramiento especializado
                     </span>
                 </div>
                 </form>

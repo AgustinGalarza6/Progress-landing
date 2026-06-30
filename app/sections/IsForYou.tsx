@@ -12,7 +12,7 @@ const segments = [
     {
         icon: BarChart3,
         title: "Scaleups",
-        description: "Empresas con tracción que buscan reescalar su arquitectura técnica, mejorar performance y acelerar su roadmap de producto.",
+        description: "Empresas con tracción que buscan escalar su arquitectura técnica, mejorar performance y acelerar su roadmap de producto.",
     },
     {
         icon: User,

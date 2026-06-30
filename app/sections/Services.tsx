@@ -39,17 +39,17 @@ export default function Services() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                         <SolutionCard
                             key="customSystems"
-                            title="Sistemas a Medida"
+                            title="Sistemas a medida"
                             description="Desarrollo de plataformas, portales y soluciones 100% personalizadas para tu negocio."
                         />
                         <SolutionCard
                             key="integration"
-                            title="Integración de Ecosistemas"
+                            title="Integración de ecosistemas"
                             description="Conectamos tus sistemas, APIs y herramientas para lograr eficiencia y automatización real."
                         />
                         <SolutionCard
                             key="automation"
-                            title="Automatización de Procesos"
+                            title="Automatización de procesos"
                             description="Optimizamos tareas repetitivas y flujos críticos con tecnología de punta."
                         />
                     </div>

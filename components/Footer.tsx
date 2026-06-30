@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const footerLinks = {
     servicios: [
-        { label: "Sistemas a Medida", href: "#servicios" },
-        { label: "Integración de Ecosistemas", href: "#servicios" },
-        { label: "Automatización de Procesos", href: "#servicios" },
+        { label: "Sistemas a medida", href: "#servicios" },
+        { label: "Integración de ecosistemas", href: "#servicios" },
+        { label: "Automatización de procesos", href: "#servicios" },
         { label: "PIL Access", href: "#servicios" },
         { label: "PIL Soft", href: "#servicios" },
     ],
     empresa: [
         { label: "Por qué elegirnos", href: "#porque-elegirnos" },
-        { label: "Nuestro Método", href: "#nuestrometodo" },
+        { label: "Nuestro método", href: "#nuestrometodo" },
         { label: "Casos de éxito", href: "#exito" },
         { label: "Contacto", href: "#contacto" },
     ],
@@ -38,7 +38,7 @@ export default function Footer() {
                 <Link href="/" className="flex items-center mb-6">
                 <img 
                     src="/logos/logo/logo_color.png" 
-                    alt="Progress in line" 
+                    alt="Progress in Line" 
                     className="h-24 w-auto"
                 />
                 </Link>

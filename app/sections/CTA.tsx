@@ -18,7 +18,7 @@ export default function CTA() {
             >
             {/* Label superior alineado a visión de producto */}
             <span className="inline-block text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-8">
-                ¿LISTO PARA ESCALAR TU VISIÓN?
+                ¿Listo para escalar tu visión?
             </span>
 
             {/* Título: Enfoque en arquitectura e ingeniería de producto */}

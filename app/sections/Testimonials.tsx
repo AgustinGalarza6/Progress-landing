@@ -3,13 +3,10 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
-// import { useLanguage } from "../../components/LanguageProvider";
-import "swiper/css";
-import "swiper/css/free-mode";
 
 const testimonials = [
     {
-        content: "El equipo de Progress in line superó nuestras expectativas. La integración fue impecable y el soporte, excelente.",
+        content: "El equipo de Progress in Line superó nuestras expectativas. La integración fue impecable y el soporte, excelente.",
         initials: "M.G.",
         author: "Martín Gómez, CTO Comahue Alarmas"
     },
@@ -21,7 +18,7 @@ const testimonials = [
     {
         content: "La calidad técnica y la atención al detalle es de primer nivel. Recomendados para proyectos exigentes.",
         initials: "F.P.",
-        author: "Federico Pérez, Fundador PIL Cloud"
+        author: "Federico Pérez, Usuario de PIL Cloud"
     },
     {
         content: "Excelente partner tecnológico. Cumplieron en tiempo y forma, y el producto final superó lo esperado.",

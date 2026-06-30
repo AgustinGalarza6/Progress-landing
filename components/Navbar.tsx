@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const navLinks = [
     { href: "#servicios", label: "Servicios" },
-    { href: "#nuestrometodo", label: "Nuestro Método" },
+    { href: "#nuestrometodo", label: "Nuestro método" },
     { href: "#exito", label: "Casos de éxito" },
     { href: "#porque-elegirnos", label: "Por qué elegirnos" },
 ];
@@ -30,14 +30,14 @@ export default function Navbar() {
         }`}
         >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            {/* Logo Progress in line */}
-            <Link href="/" className="flex items-center gap-2 group">
+            {/* Logo Progress in Line */}
+            <a href="#inicio" className="flex items-center gap-2 group">
             <img 
                 src="/logos/logo/logo_color.png" 
-                alt="Progress in line" 
+                alt="Progress in Line" 
                 className="h-24 w-auto"
             />
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">

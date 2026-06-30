@@ -17,9 +17,9 @@ const PRIMARY = "#6B9FF0";
 const SECONDARY = "#4A7EDF";
 
 const WEB_PLANS = [
-  { id: "silver", name: "WEB PLAN SILVER", price: 270, features: ["Landing Page profesional", "Diseño responsivo + moderno", "Hasta 3 cuentas de email coorporativos"] },
-  { id: "gold", name: "WEB PLAN GOLD", price: 380, features: ["Página web hasta 3 secciones navegables", "Diseño responsivo + moderno", "Hasta 5 cuentas de email coorporativos"] },
-  { id: "platinum", name: "WEB PLAN PLATINUM + PIL CLOUD", price: 600, features: ["Página web hasta 5 secciones navegables", "Diseño responsivo + moderno", "Incluye PIL Cloud + 1TB almacenamiento de backups"] },
+  { id: "silver", name: "WEB PLAN SILVER", price: 270, features: ["Landing page profesional", "Diseño responsivo y moderno", "Hasta 3 cuentas de email corporativo"] },
+  { id: "gold", name: "WEB PLAN GOLD", price: 380, features: ["Página web de hasta 3 secciones navegables", "Diseño responsivo y moderno", "Hasta 5 cuentas de email corporativo"] },
+  { id: "platinum", name: "WEB PLAN PLATINUM + PIL CLOUD", price: 600, features: ["Página web de hasta 5 secciones navegables", "Diseño responsivo y moderno", "Incluye PIL Cloud + 1 TB de almacenamiento para backups"] },
 ];
 
 const ADD_ONS = [
@@ -52,27 +52,9 @@ function ToggleSwitch({ checked, onChange }: { checked: boolean; onChange: () =>
 export default function WebConfigurator() {
   const [selectedPlan, setSelectedPlan] = useState<string>("gold");
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
-  const [exchangeRate, setExchangeRate] = useState<number>(FALLBACK_EXCHANGE_RATE);
-  const [loadingExchange, setLoadingExchange] = useState<boolean>(true);
-
-  useEffect(() => {
-    const fetchExchangeRate = async () => {
-      try {
-        const response = await fetch("/api/bna-rate", { cache: "no-store" });
-        if (response.ok) {
-          const data = await response.json();
-          if (data.sell) setExchangeRate(data.sell);
-        }
-      } catch {
-        console.log("No se pudo obtener el tipo de cambio BNA actual");
-      } finally {
-        setLoadingExchange(false);
-      }
-    };
-    fetchExchangeRate();
-    const intervalId = window.setInterval(fetchExchangeRate, 15 * 60 * 1000);
-    return () => window.clearInterval(intervalId);
-  }, []);
+  // Eliminado fetch a API BNA para build estático
+  const exchangeRate = FALLBACK_EXCHANGE_RATE;
+  const loadingExchange = false;
 
   const basePlanPrice = useMemo(() => WEB_PLANS.find((p) => p.id === selectedPlan)?.price ?? 0, [selectedPlan]);
 
@@ -211,11 +193,13 @@ export default function WebConfigurator() {
                   <span className="text-lg" style={{ color: "rgba(255,255,255,0.85)" }}>Total estimado</span>
                   <span className="text-4xl font-black" style={{ color: "#ffffff" }}>${totalPrice.toLocaleString("en-US")} USD</span>
                 </div>
-                <p className="text-xs text-right" style={{ color: "rgba(255,255,255,0.45)" }}>≈ ${(totalPrice * exchangeRate).toLocaleString("es-AR", { maximumFractionDigits: 0 })} ARS{!loadingExchange && " (T.C. referencial)"}</p>
+                <p className="text-xs text-right mt-2 text-gray-500">
+                  Cotización en pesos a valor BNA del día de pago. Consultar cotización exacta antes de contratar.
+                </p>
               </div>
 
               <button onClick={handleFinishOrder} className="w-full flex items-center justify-center gap-2 font-black text-lg py-5 rounded-full transition-all duration-200 hover:shadow-xl active:scale-95" style={{ background: "#ffffff", color: SECONDARY }}>
-                Finalizar Pedido
+                Finalizar pedido
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>

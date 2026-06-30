@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 const processSteps = [
     {
         stage: "ETAPA 1",
-        title: "Kickoff & Visión Estratégica",
+        title: "Kickoff y visión estratégica",
         items: [
         "Sesión de alineación técnica para definir el ecosistema del proyecto, el roadmap inicial y los protocolos de comunicación.",
         "Establecemos los KPI de negocio y el alcance del producto digital desde una perspectiva de ingeniería."
@@ -20,7 +20,7 @@ const processSteps = [
     },
     {
         stage: "ETAPA 2",
-        title: "Arquitectura & Prototipado",
+        title: "Arquitectura y prototipado",
         items: [
         "Diseño de la arquitectura de software y validación de viabilidad técnica (PoC) para mitigar riesgos tempranos.",
         "Desarrollo de prototipos funcionales y flujos de usuario (UX) para validar la lógica del sistema antes de la construcción.",
@@ -29,7 +29,7 @@ const processSteps = [
     },
     {
         stage: "ETAPA 3",
-        title: "Desarrollo Ágil e Iterativo",
+        title: "Desarrollo ágil e iterativo",
         items: [
         "Ejecución en ciclos de Sprints con entregas funcionales constantes y visibilidad total del progreso.",
         "Acceso a nuestra plataforma de seguimiento para decisiones en tiempo real y gestión del backlog técnico.",
@@ -38,7 +38,7 @@ const processSteps = [
     },
     {
         stage: "ETAPA 4",
-        title: "QA, Lanzamiento & Evolución",
+        title: "QA, lanzamiento y evolución",
         items: [
         "Protocolos de QA Hardening y pruebas de rendimiento para garantizar un despliegue controlado y seguro.",
         "Acompañamiento integral en el Go-Live y monitoreo post-lanzamiento de la infraestructura.",
@@ -58,7 +58,7 @@ export default function Process() {
             className="max-w-3xl"
             >
             <span className="text-gray-400 text-sm font-light mb-4 block uppercase tracking-widest">
-                Nuestro Método
+                Nuestro método
             </span>
             <h2 className="text-[40px] md:text-[56px] leading-[1.1] font-normal text-white tracking-tight">
                 Rigor técnico, metodología ágil <br />
