@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Hero from "./sections/Hero";
 import ClientsSlider from "./sections/ClientsSlider";
 import Services from "./sections/Services";
+import Products from "./sections/Products";
 import WebConfigurator from "./sections/WebConfigurator";
 import Process from "./sections/Process";
 import Testimonials from "./sections/Testimonials";
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <ClientsSlider />
       <Services />
+      <Products />
       <WebConfigurator />
       <Process />
       <Testimonials />

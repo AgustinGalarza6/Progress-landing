@@ -2,14 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const solutionsKeys = [
-    "customSystems",
-    "integration",
-    "automation",
-    "pilAccess",
-    "pilSoft"
-];
-
 export default function Services() {
     return (
         <section id="servicios" className="py-24 relative bg-black overflow-hidden font-sans">
@@ -35,8 +27,8 @@ export default function Services() {
                     </motion.h2>
                 </div>
 
-                {/* Grid de Servicios: 3 arriba, 2 abajo centrado */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                {/* Grid de Servicios */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <SolutionCard
                             key="customSystems"
                             title="Sistemas a medida"
@@ -51,19 +43,6 @@ export default function Services() {
                             key="automation"
                             title="Automatización de procesos"
                             description="Optimizamos tareas repetitivas y flujos críticos con tecnología de punta."
-                        />
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[66%] mx-auto">
-                        <SolutionCard
-                            key="pilAccess"
-                            title="PIL Access"
-                            description="Control de accesos, turnos y gestión de visitantes para empresas modernas."
-                        />
-                        <SolutionCard
-                            key="pilSoft"
-                            title="PIL Soft"
-                            description="Software de gestión y soluciones verticales para industrias específicas."
                         />
                     </div>
                 </div>

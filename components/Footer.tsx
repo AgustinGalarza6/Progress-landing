@@ -6,8 +6,10 @@ const footerLinks = {
         { label: "Sistemas a medida", href: "#servicios" },
         { label: "Integración de ecosistemas", href: "#servicios" },
         { label: "Automatización de procesos", href: "#servicios" },
-        { label: "PIL Access", href: "#servicios" },
-        { label: "PIL Soft", href: "#servicios" },
+    ],
+    productos: [
+        { label: "PIL Access", href: "#productos" },
+        { label: "PIL Soft", href: "#productos" },
     ],
     empresa: [
         { label: "Por qué elegirnos", href: "#porque-elegirnos" },
@@ -32,7 +34,7 @@ export default function Footer() {
     return (
         <footer className="bg-black border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
             {/* Brand */}
             <div className="lg:col-span-2">
                 <Link href="/" className="flex items-center mb-6">
@@ -69,6 +71,19 @@ export default function Footer() {
                 <h4 className="text-white font-semibold mb-4">Servicios</h4>
                 <ul className="space-y-3">
                 {footerLinks.servicios.map((link) => (
+                    <li key={link.label}>
+                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                        {link.label}
+                    </Link>
+                    </li>
+                ))}
+                </ul>
+            </div>
+
+            <div>
+                <h4 className="text-white font-semibold mb-4">Productos</h4>
+                <ul className="space-y-3">
+                {footerLinks.productos.map((link) => (
                     <li key={link.label}>
                     <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
                         {link.label}
