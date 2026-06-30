@@ -3,58 +3,108 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
-const logos = [
-    { name: "Sakya Tec", url: "/clients_slider/sakya_tec.png" },
-    { name: "Comahue", url: "/clients_slider/comahue_alarmas.png" },
+type ClientLogo = {
+    name: string;
+    url: string;
+    alt: string;
+    maxWidth: string;
+    maxHeight: string;
+    clipPath?: string;
+};
+
+const logos: ClientLogo[] = [
+    {
+        name: "Sakya Tec",
+        url: "/clients_slider/sakya_tec.png",
+        alt: "Logo de Sakya Tec",
+        maxWidth: "128px",
+        maxHeight: "72px",
+    },
+    {
+        name: "Comahue",
+        url: "/clients_slider/comahue_alarmas.png",
+        alt: "Logo de Comahue Alarmas",
+        maxWidth: "104px",
+        maxHeight: "72px",
+    },
+    {
+        name: "YPF",
+        url: "/clients_slider/ypf.svg",
+        alt: "Logo de YPF",
+        maxWidth: "128px",
+        maxHeight: "58px",
+    },
+    {
+        name: "Mostaza",
+        url: "/clients_slider/mostaza.png",
+        alt: "Logo de Mostaza",
+        maxWidth: "116px",
+        maxHeight: "70px",
+    },
+    {
+        name: "Hospital Británico",
+        url: "/clients_slider/hospital-britanico.webp",
+        alt: "Logo de Hospital Británico",
+        maxWidth: "190px",
+        maxHeight: "58px",
+    },
+    {
+        name: "CableVisión",
+        url: "/clients_slider/cablevision.png",
+        alt: "Logo de CableVisión",
+        maxWidth: "140px",
+        maxHeight: "66px",
+        clipPath: "inset(28% 5% 28% 5%)",
+    },
 ];
 
 export default function ClientsSlider() {
-    // Duplicamos la lista para el efecto infinito del marquee
     const repeatedLogos = [...logos, ...logos, ...logos];
 
     return (
         <section id="clientes" className="py-16 bg-black overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 mb-12 flex justify-center">
-            <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3 text-white/90 group cursor-default"
-            >
-            {/* Icono circular con flecha como en la foto 1 */}
-            <div className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center group-hover:border-white/60 transition-colors">
-                <ChevronRight className="w-3.5 h-3.5" />
-            </div>
-            <span className="text-sm md:text-base font-light tracking-tight opacity-80">
-                Nos eligieron para impulsar su crecimiento
-            </span>
-            </motion.div>
-        </div>
-
-        <div className="relative group">
-            {/* Degradados laterales para suavizar la entrada/salida */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-10" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-10" />
-
-            {/* Marquee Track (usa la animación de tu globals.css) */}
-            <div className="marquee-track flex items-center gap-16 md:gap-24 py-4">
-            {repeatedLogos.map((logo, index) => (
-                <div
-                key={`${logo.name}-${index}`}
-                className="flex-shrink-0 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer"
+            <div className="max-w-7xl mx-auto px-6 mb-12 flex justify-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-3 text-white/90 group cursor-default"
                 >
-                {/* Si tienes las imágenes, usa <img />. Si no, el nombre con fuente Host Grotesk */}
-                {logo.url ? (
-                    <img src={logo.url} alt={logo.name} className="h-32 md:h-48 w-auto object-contain" />
-                ) : (
-                    <span className="text-4xl md:text-7xl font-bold tracking-tighter text-white uppercase italic">
-                    {logo.name}
+                    <div className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center group-hover:border-white/60 transition-colors">
+                        <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+                    </div>
+                    <span className="text-sm md:text-base font-light tracking-tight opacity-80">
+                        Empresas y organizaciones vinculadas a nuestros proyectos
                     </span>
-                )}
-                </div>
-            ))}
+                </motion.div>
             </div>
-        </div>
+
+            <div className="relative group">
+                <div
+                    className="marquee-track flex items-center gap-10 py-4 md:gap-14"
+                    style={{ animationDuration: "68s" }}
+                >
+                    {repeatedLogos.map((logo, index) => (
+                        <div
+                            key={`${logo.name}-${index}`}
+                            className="flex h-24 w-44 flex-shrink-0 items-center justify-center overflow-hidden md:w-56"
+                        >
+                            <img
+                                src={logo.url}
+                                alt={logo.alt}
+                                className="block object-contain"
+                                style={{
+                                    width: "auto",
+                                    height: "auto",
+                                    maxWidth: logo.maxWidth,
+                                    maxHeight: logo.maxHeight,
+                                    clipPath: logo.clipPath,
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
     );
 }
