@@ -4,12 +4,18 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
 import { useState } from "react";
 
+const contactBenefits = [
+    "Respuesta personalizada",
+    "Análisis inicial sin compromiso",
+    "Orientación técnica y comercial",
+];
+
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         company: "",
-        type: "Desarrollo a medida",
+        type: "Sistema a medida",
         message: "",
     });
 
@@ -27,7 +33,7 @@ export default function Contact() {
             const json = await res.json();
             if(res.ok && json.ok){
                 setStatus('success');
-                setFormData({ name: '', email: '', company: '', type: 'Desarrollo a medida', message: '' });
+                setFormData({ name: '', email: '', company: '', type: 'Sistema a medida', message: '' });
             }else{
                 setStatus('error');
             }
@@ -53,15 +59,28 @@ export default function Contact() {
                 viewport={{ once: true }}
             >
                 <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
-                CANALES DE ATENCIÓN
+                CONTACTO
                 </span>
                 <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
-                Hablar con <br />
-                <span className="text-[#6B9FF0] font-normal">un asesor</span>
+                Contanos qué <br />
+                <span className="text-[#6B9FF0] font-normal">necesitás resolver</span>
                 </h2>
                 <p className="text-gray-400 mb-12 text-lg font-light max-w-md">
-                Un asesor de nuestro equipo se pondrá en contacto para analizar tu requerimiento técnico de manera personalizada.
+                Analizamos tu proceso, detectamos oportunidades de mejora y te orientamos sobre la solución digital más adecuada para tu empresa.
                 </p>
+
+                <p className="text-gray-500 mb-8 text-base font-light max-w-md leading-relaxed">
+                Podés escribirnos para desarrollar un sistema a medida, integrar herramientas existentes, automatizar procesos internos o consultar por una web profesional.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 mb-10 max-w-md">
+                {contactBenefits.map((benefit) => (
+                    <div key={benefit} className="flex items-center gap-3 text-sm text-gray-300">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#6B9FF0]" />
+                    {benefit}
+                    </div>
+                ))}
+                </div>
 
                 <div className="space-y-4">
                 {[
@@ -137,10 +156,12 @@ export default function Contact() {
                         value={formData.type}
                         onChange={(e) => setFormData({ ...formData, type: e.target.value })}
                     >
-                        <option>Desarrollo a medida</option>
+                        <option>Sistema a medida</option>
                         <option>Integración de sistemas</option>
                         <option>Automatización de procesos</option>
-                        <option>PIL Access / PIL Soft</option>
+                        <option>Desarrollo web</option>
+                        <option>Producto PIL</option>
+                        <option>Otra consulta</option>
                     </select>
                     </div>
                 </div>
@@ -151,7 +172,7 @@ export default function Contact() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-[#6B9FF0]/50 transition-all resize-none"
-                    placeholder="Describí brevemente tu requerimiento técnico..."
+                    placeholder="Contanos qué proceso, sistema o necesidad querés resolver..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
