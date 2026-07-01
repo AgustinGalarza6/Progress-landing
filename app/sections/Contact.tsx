@@ -139,7 +139,7 @@ export default function Contact() {
                     >
                         <option>Desarrollo a medida</option>
                         <option>Integración de sistemas</option>
-                        <option>Automatización / IA</option>
+                        <option>Automatización de procesos</option>
                         <option>PIL Access / PIL Soft</option>
                     </select>
                     </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                     className="w-full py-4 bg-[#6B9FF0] text-black rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-[#8bb7f7] transition-all flex items-center justify-center gap-2 group active:scale-95 shadow-[0_0_20px_rgba(107,159,240,0.3)]"
                     disabled={status === 'loading'}
                 >
-                    {status === 'loading' ? 'Enviando...' : 'Solicitar contacto'}
+                    {status === 'loading' ? 'Enviando...' : 'Enviar consulta'}
                     <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
 

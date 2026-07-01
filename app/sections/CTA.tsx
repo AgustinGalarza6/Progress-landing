@@ -34,11 +34,11 @@ export default function CTA() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="https://wa.me/5491138923268" target="_blank" rel="noreferrer" className="group px-10 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all active:scale-95 text-base flex items-center gap-2 transform-gpu will-change-transform subpixel-antialiased antialiased shadow-sm" style={{ WebkitFontSmoothing: 'antialiased' }}>
-                Iniciar consultoría técnica
+                Solicitar diagnóstico
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a href="#exito" className="px-10 py-4 bg-transparent border border-white/20 rounded-lg font-medium text-base hover:bg-white/5 transition-all text-white/90">
-                Ver casos de éxito
+                Ver testimonios
                 </a>
             </div>
 

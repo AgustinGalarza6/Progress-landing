@@ -46,7 +46,7 @@ export default function Footer() {
                 />
                 </Link>
                 <p className="text-gray-400 mb-6 max-w-sm">
-                Transformamos ideas en soluciones digitales de alto impacto utilizando tecnologías modernas e IA.
+                Transformamos ideas en soluciones digitales de alto impacto utilizando tecnologías modernas y automatización.
                 </p>
                 <div className="flex gap-4">
                 {[

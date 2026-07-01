@@ -54,7 +54,7 @@ export default function Navbar() {
             ))}
             <div className="h-4 w-[1px] bg-white/20 mx-2"></div>
             <Link href="/#contacto" className="border border-white/40 px-5 py-2 rounded-md text-sm font-medium hover:bg-white hover:text-black transition-all">
-                Contacto
+                Hablar con un asesor
             </Link>
             </div>
 
@@ -72,7 +72,7 @@ export default function Navbar() {
                 {link.label}
                 </Link>
             ))}
-            <Link href="/#contacto" className="w-full py-3 bg-white text-black font-bold rounded-md text-center" onClick={() => setIsMobileMenuOpen(false)}>Contacto</Link>
+            <Link href="/#contacto" className="w-full py-3 bg-white text-black font-bold rounded-md text-center" onClick={() => setIsMobileMenuOpen(false)}>Hablar con un asesor</Link>
             </div>
         )}
         </nav>

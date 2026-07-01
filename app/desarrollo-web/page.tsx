@@ -101,7 +101,7 @@ export default function DesarrolloWebPage() {
                             href="#desarrollo-web"
                             className="inline-flex items-center justify-center px-8 py-4 border border-white/20 rounded-lg font-medium text-white/90 hover:bg-white/5 transition-all"
                         >
-                            Ver planes
+                            Ver planes de desarrollo web
                         </Link>
                     </div>
                 </div>

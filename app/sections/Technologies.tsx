@@ -83,11 +83,11 @@ export default function Technologies() {
             >
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
-                <h3 className="text-2xl font-bold text-white mb-2">¿Listo para integrar IA?</h3>
-                <p className="text-gray-400">Implementamos modelos de lenguaje, visión por computadora y análisis predictivo.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">¿Listo para optimizar procesos?</h3>
+                <p className="text-gray-400">Implementamos automatizaciones, análisis operativo y soluciones inteligentes aplicadas a procesos reales.</p>
                 </div>
                 <button className="px-6 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors whitespace-nowrap">
-                Consultar Soluciones IA
+                Solicitar diagnóstico
                 </button>
             </div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[100px]" />

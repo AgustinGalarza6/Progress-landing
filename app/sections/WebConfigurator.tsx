@@ -140,7 +140,7 @@ export default function WebConfigurator() {
 
             <div className="rounded-[2rem] p-10 border-2 border-[#6B9FF0] bg-[#101624] shadow-lg font-sans">
               <h3 className="text-xl font-medium mb-8" style={{ color: PRIMARY }}>
-                Servicios Adicionales
+                Servicios adicionales
               </h3>
               <div className="space-y-1">
                 {ADD_ONS.map((addon) => {
@@ -169,7 +169,7 @@ export default function WebConfigurator() {
 
           <div className="lg:w-1/3 lg:sticky lg:top-8">
             <div className="rounded-[2.5rem] p-10 border-2 border-[#6B9FF0] bg-[#101624] shadow-lg font-sans">
-              <h3 className="text-2xl font-medium mb-8" style={{ color: "#ffffff" }}>Resumen del Pedido</h3>
+              <h3 className="text-2xl font-medium mb-8" style={{ color: "#ffffff" }}>Resumen de la consulta</h3>
 
               <div className="space-y-5 mb-10 pb-10 border-b border-white/10">
                 <div className="flex justify-between items-center">
@@ -199,7 +199,7 @@ export default function WebConfigurator() {
               </div>
 
               <button onClick={handleFinishOrder} className="w-full flex items-center justify-center gap-2 font-black text-lg py-5 rounded-full transition-all duration-200 hover:shadow-xl active:scale-95" style={{ background: "#ffffff", color: SECONDARY }}>
-                Finalizar pedido
+                Consultar por mi web
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
