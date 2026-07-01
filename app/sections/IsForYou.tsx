@@ -22,7 +22,7 @@ const segments = [
     {
         icon: Building2,
         title: "Corporaciones",
-        description: "Áreas de innovación que impulsan iniciativas complejas de transformación digital, automatización e IA aplicada.",
+        description: "Áreas de innovación que impulsan iniciativas complejas de transformación digital, automatización y procesos inteligentes.",
     },
     ];
 

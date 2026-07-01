@@ -16,9 +16,9 @@ const faqs = [
         "Dependiendo de la complejidad arquitectónica, una Proof of Concept (PoC) o MVP funcional suele iterarse entre 8 y 16 semanas, con entregas de valor técnico verificables en cada ciclo de desarrollo.",
     },
     {
-        question: "¿Cómo integran soluciones de Inteligencia Artificial?",
+        question: "¿Cómo integran soluciones automatizadas?",
         answer:
-        "Implementamos IA (LLMs, Computer Vision o modelos predictivos) únicamente cuando existe un caso de uso técnico que optimice procesos, reduzca costos operativos o mejore significativamente la conversión.",
+        "Implementamos automatización, análisis operativo y procesos inteligentes únicamente cuando existe un caso de uso técnico que optimice procesos, reduzca costos operativos o mejore significativamente la conversión.",
     },
     {
         question: "¿Progress in Line actúa como partner técnico de largo plazo?",

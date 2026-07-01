@@ -14,7 +14,7 @@ const technologies = [
     { name: "AWS", category: "Cloud", color: "#FF9900" },
     { name: "Docker", category: "DevOps", color: "#2496ED" },
     { name: "Kubernetes", category: "DevOps", color: "#326CE5" },
-    { name: "TensorFlow", category: "AI", color: "#FF6F00" },
+    { name: "TensorFlow", category: "Automatización", color: "#FF6F00" },
 ];
 
 export default function Technologies() {
@@ -74,7 +74,7 @@ export default function Technologies() {
             ))}
             </div>
 
-            {/* AI Banner */}
+            {/* Automation Banner */}
             <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
