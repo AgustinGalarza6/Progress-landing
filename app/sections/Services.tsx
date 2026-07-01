@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Services() {
     return (
-        <section id="servicios" className="py-24 relative bg-black overflow-hidden font-sans">
+        <section id="servicios" className="py-20 md:py-24 relative bg-black overflow-hidden font-sans">
             {/* Background Grid - Se mantiene igual */}
             <div className="absolute inset-0 opacity-30"
                 style={{
@@ -15,12 +15,12 @@ export default function Services() {
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 {/* Encabezado: Texto fino y centrado con copy de ingeniería */}
-                <div className="text-center mb-20">
+                <div className="text-center mb-14 md:mb-20">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight"
+                        className="text-[34px] md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-tight"
                     >
                         Soluciones digitales a medida <br />
                         <span className="font-normal text-[#6B9FF0]">para empresas exigentes</span>
@@ -56,12 +56,12 @@ function SolutionCard({ title, description }: { title: string; description: stri
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group relative h-[240px] bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 hover:border-[#6B9FF0] transition-all duration-300 flex flex-col justify-start text-left overflow-hidden"
+            className="group relative min-h-[220px] md:h-[240px] bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 md:p-8 hover:border-[#6B9FF0] transition-all duration-300 flex flex-col justify-start text-left overflow-hidden"
         >
             {/* Transparencia superior */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-            <h3 className="text-3xl font-normal text-white mb-4 tracking-tight transition-colors duration-300 group-hover:text-[#6B9FF0]">
+            <h3 className="text-2xl md:text-3xl font-normal text-white mb-4 tracking-tight transition-colors duration-300 group-hover:text-[#6B9FF0]">
                 {title}
             </h3>
             <p className="text-gray-400 text-base leading-relaxed font-light">

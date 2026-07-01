@@ -28,7 +28,7 @@ const segments = [
 
     export default function IsForYou() {
     return (
-        <section id="perfil" className="py-24 relative bg-black overflow-hidden font-sans border-t border-white/5">
+        <section id="perfil" className="py-20 md:py-24 relative bg-black overflow-hidden font-sans border-t border-white/5">
         
         {/* Background Grid unificado con la sección de Servicios sobre fondo negro */}
         <div className="absolute inset-0 opacity-[0.2] pointer-events-none" 
@@ -41,13 +41,13 @@ const segments = [
         <div className="relative z-10 max-w-7xl mx-auto px-6">
             
             {/* Encabezado: Mix de Host Grotesk y Azul Acero */}
-            <div className="text-center mb-20">
+            <div className="text-center mb-12 md:mb-20">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight">
+                <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight">
                     <span className="text-[#6B9FF0] font-normal">Nos adaptamos</span> al momento de tu idea
                 </h2>
             </motion.div>
@@ -62,10 +62,10 @@ const segments = [
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 transition-all duration-500 hover:border-[#6B9FF0]/40"
+                className="group relative bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 md:p-8 transition-all duration-500 hover:border-[#6B9FF0]/40"
                 >
                 {/* Icono minimalista con el azul acero */}
-                <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
                     <item.icon className="w-6 h-6 text-[#6B9FF0] opacity-70 group-hover:opacity-100 transition-opacity" />
                 </div>
 

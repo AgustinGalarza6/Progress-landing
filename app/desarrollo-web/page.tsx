@@ -6,9 +6,36 @@ import Footer from "../../components/Footer";
 import WebConfigurator from "../sections/WebConfigurator";
 
 export const metadata: Metadata = {
-    title: "Desarrollo web profesional | Progress in Line",
+    title: {
+        absolute: "Desarrollo web profesional | Progress in Line",
+    },
     description:
-        "Planes de desarrollo web, landing pages y sitios corporativos para empresas. Diseño moderno, SEO, velocidad y enfoque en conversión.",
+        "Planes de desarrollo web, landing pages y sitios corporativos para empresas. Diseño moderno, velocidad, SEO y enfoque en conversión.",
+    alternates: {
+        canonical: "/desarrollo-web",
+    },
+    openGraph: {
+        type: "website",
+        locale: "es_AR",
+        url: "/desarrollo-web",
+        siteName: "Progress in Line",
+        title: "Desarrollo web profesional | Progress in Line",
+        description:
+            "Planes de desarrollo web, landing pages y sitios corporativos para empresas. Diseño moderno, velocidad, SEO y enfoque en conversión.",
+        images: [
+            {
+                url: "/background/hero_background.jpg",
+                alt: "Desarrollo web profesional - Progress in Line",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Desarrollo web profesional | Progress in Line",
+        description:
+            "Planes de desarrollo web, landing pages y sitios corporativos para empresas. Diseño moderno, velocidad, SEO y enfoque en conversión.",
+        images: ["/background/hero_background.jpg"],
+    },
 };
 
 const webTypes = [
@@ -67,7 +94,7 @@ export default function DesarrolloWebPage() {
         <main className="relative bg-black text-white">
             <Navbar />
 
-            <section className="relative min-h-[78vh] flex items-center overflow-hidden pt-36 pb-20 bg-black">
+            <section className="relative min-h-[78vh] flex items-center overflow-hidden pt-32 md:pt-36 pb-20 bg-black">
                 <div className="absolute inset-0 opacity-30"
                     style={{
                         backgroundImage: `linear-gradient(#ffffff14 1px, transparent 1px), linear-gradient(90deg, #ffffff14 1px, transparent 1px)`,
@@ -107,13 +134,13 @@ export default function DesarrolloWebPage() {
                 </div>
             </section>
 
-            <section className="py-24 bg-[#0a0a0a] border-t border-white/5">
-                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <section className="py-20 md:py-24 bg-[#0a0a0a] border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                     <div>
                         <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
                             Qué desarrollamos
                         </span>
-                        <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
+                        <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
                             Webs claras, rápidas <br />
                             <span className="text-[#6B9FF0] font-normal">y orientadas a negocio</span>
                         </h2>
@@ -134,20 +161,20 @@ export default function DesarrolloWebPage() {
 
             <WebConfigurator />
 
-            <section className="py-24 bg-black border-t border-white/5">
+            <section className="py-20 md:py-24 bg-black border-t border-white/5">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="mb-14 max-w-3xl">
+                    <div className="mb-10 md:mb-14 max-w-3xl">
                         <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
                             Beneficios
                         </span>
-                        <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight">
+                        <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight">
                             Una web preparada <br />
                             <span className="text-[#6B9FF0] font-normal">para crecer con tu empresa</span>
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {benefits.map((benefit) => (
-                            <div key={benefit.title} className="group relative bg-black/60 border border-white/[0.08] rounded-2xl p-7 hover:border-[#6B9FF0]/40 transition-all">
+                            <div key={benefit.title} className="group relative bg-black/60 border border-white/[0.08] rounded-2xl p-6 md:p-7 hover:border-[#6B9FF0]/40 transition-all">
                                 <div className="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center mb-7">
                                     <benefit.icon className="w-5 h-5 text-[#6B9FF0]" aria-hidden="true" />
                                 </div>
@@ -159,13 +186,13 @@ export default function DesarrolloWebPage() {
                 </div>
             </section>
 
-            <section className="py-24 bg-[#0a0a0a] border-t border-white/5">
-                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <section className="py-20 md:py-24 bg-[#0a0a0a] border-t border-white/5">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <div>
                         <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
                             Proceso
                         </span>
-                        <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight">
+                        <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight">
                             Un recorrido simple <br />
                             <span className="text-[#6B9FF0] font-normal">para publicar mejor</span>
                         </h2>
@@ -176,26 +203,26 @@ export default function DesarrolloWebPage() {
                                 <div className="w-10 h-10 rounded-full bg-[#6B9FF0]/10 border border-[#6B9FF0]/20 flex items-center justify-center text-[#6B9FF0] text-sm font-semibold flex-shrink-0">
                                     {index + 1}
                                 </div>
-                                <p className="text-gray-300 text-lg font-light leading-relaxed">{step}</p>
+                                <p className="text-gray-300 text-base md:text-lg font-light leading-relaxed">{step}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="py-24 bg-black border-t border-white/5">
+            <section className="py-20 md:py-24 bg-black border-t border-white/5">
                 <div className="max-w-4xl mx-auto px-6">
-                    <div className="text-center mb-14">
+                    <div className="text-center mb-10 md:mb-14">
                         <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
                             Preguntas frecuentes
                         </span>
-                        <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight">
+                        <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight">
                             Antes de contratar
                         </h2>
                     </div>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
-                            <div key={faq.question} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+                            <div key={faq.question} className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 md:p-6">
                                 <h3 className="text-white text-lg font-normal mb-3">{faq.question}</h3>
                                 <p className="text-gray-400 font-light leading-relaxed">{faq.answer}</p>
                             </div>
@@ -204,10 +231,10 @@ export default function DesarrolloWebPage() {
                 </div>
             </section>
 
-            <section className="py-24 bg-[#0a0a0a] border-t border-white/5">
+            <section className="py-20 md:py-24 bg-[#0a0a0a] border-t border-white/5">
                 <div className="max-w-5xl mx-auto px-6 text-center">
                     <Clock className="w-10 h-10 text-[#6B9FF0] mx-auto mb-6" aria-hidden="true" />
-                    <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
+                    <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
                         ¿Listo para mejorar tu presencia digital?
                     </h2>
                     <p className="max-w-2xl mx-auto text-gray-400 text-lg font-light leading-relaxed mb-10">
@@ -217,7 +244,7 @@ export default function DesarrolloWebPage() {
                         href="https://wa.me/5491138923268"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-all active:scale-95"
+                        className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-all active:scale-95"
                     >
                         Hablar con un asesor
                         <ArrowRight className="w-5 h-5" aria-hidden="true" />

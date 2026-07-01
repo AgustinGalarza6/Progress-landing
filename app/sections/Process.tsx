@@ -49,8 +49,8 @@ const processSteps = [
 
 export default function Process() {
     return (
-        <section id="nuestrometodo" className="py-24 bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 mb-16">
+        <section id="nuestrometodo" className="py-20 md:py-24 bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16">
             <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Process() {
             <span className="text-gray-400 text-sm font-light mb-4 block uppercase tracking-widest">
                 Nuestro método
             </span>
-            <h2 className="text-[40px] md:text-[56px] leading-[1.1] font-normal text-white tracking-tight">
+            <h2 className="text-[34px] md:text-[56px] leading-[1.1] font-normal text-white tracking-tight">
                 Rigor técnico, metodología ágil <br />
                 <span className="text-white/50">y productos de ingeniería</span>
             </h2>
@@ -85,7 +85,7 @@ export default function Process() {
             >
             {processSteps.map((step, index) => (
                 <SwiperSlide key={index} className="opacity-40 swiper-slide-active:opacity-100 transition-opacity duration-500">
-                <div className="pt-12 pb-8 pr-8">
+                <div className="pt-10 md:pt-12 pb-8 pr-6 md:pr-8">
                     <div className="flex items-center gap-4 mb-8">
                     <div className="w-2 h-2 rounded-full bg-white shadow-[0_0_8px_white]" />
                     <span className="text-[11px] font-medium text-gray-500 uppercase tracking-[0.2em]">

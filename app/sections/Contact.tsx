@@ -44,13 +44,13 @@ export default function Contact() {
     };
 
     return (
-        <section id="contacto" className="py-32 relative overflow-hidden bg-black">
+        <section id="contacto" className="py-20 md:py-32 relative overflow-hidden bg-black">
         {/* Background Elements - Coherencia con CTA */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6B9FF0]/10 rounded-full blur-[128px]" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4A7EDF]/10 rounded-full blur-[128px]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             
             {/* Info - Estilo Canales de Atención CTC */}
             <motion.div
@@ -61,11 +61,11 @@ export default function Contact() {
                 <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
                 CONTACTO
                 </span>
-                <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
+                <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
                 Contanos qué <br />
                 <span className="text-[#6B9FF0] font-normal">necesitás resolver</span>
                 </h2>
-                <p className="text-gray-400 mb-12 text-lg font-light max-w-md">
+                <p className="text-gray-400 mb-8 md:mb-12 text-lg font-light max-w-md">
                 Analizamos tu proceso, detectamos oportunidades de mejora y te orientamos sobre la solución digital más adecuada para tu empresa.
                 </p>
 
@@ -107,7 +107,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-[#0a0a0a] border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl relative"
+                className="bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-10 shadow-2xl relative"
             >
                 {/* Brillo superior decorativo */}
                 <div className="absolute top-0 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-[#6B9FF0]/40 to-transparent" />
@@ -190,7 +190,7 @@ export default function Contact() {
                 {status === 'success' && <p className="text-sm text-green-400 mt-2">Mensaje enviado. Te contactamos pronto.</p>}
                 {status === 'error' && <p className="text-sm text-red-400 mt-2">Error al enviar. Intenta nuevamente más tarde.</p>}
                 
-                <div className="flex justify-center gap-6 pt-2">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pt-2">
                     <span className="flex items-center gap-2 text-[9px] text-gray-500 font-bold uppercase tracking-tighter">
                     <div className="w-1 h-1 rounded-full bg-[#6B9FF0]" /> Atención profesional
                     </span>

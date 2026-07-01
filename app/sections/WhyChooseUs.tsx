@@ -31,7 +31,7 @@ const metrics = [
     export default function WhyChooseUs() {
         // const { t } = useLanguage();
         return (
-            <section id="porque-elegirnos" className="py-28 bg-black">
+            <section id="porque-elegirnos" className="py-20 md:py-28 bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -42,7 +42,7 @@ const metrics = [
                     <span className="text-[#6B9FF0] font-medium tracking-[0.2em] uppercase text-[10px] mb-4 block">
                     ¿Por qué elegirnos?
                     </span>
-                    <h2 className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
+                    <h2 className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6">
                     Expertos en ingeniería <br />
                     <span className="text-[#6B9FF0] font-normal">y arquitectura digital</span>
                     </h2>
@@ -67,7 +67,7 @@ const metrics = [
                     initial={{ opacity: 0, x: 24 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] rounded-3xl p-10"
+                    className="bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] rounded-3xl p-6 md:p-10"
                 >
                     <h3 className="text-white text-2xl font-normal mb-10 tracking-tight">
                     Resultados comprobados <br /> <span className="text-gray-500">en cada proyecto</span>
@@ -75,7 +75,7 @@ const metrics = [
                     <div className="grid grid-cols-1 gap-10">
                     {metrics.map((metric, idx) => (
                         <div key={idx} className="border-l border-[#6B9FF0]/30 pl-6">
-                        <p className="text-5xl font-light text-white mb-2">{metric.value}</p>
+                        <p className="text-4xl md:text-5xl font-light text-white mb-2">{metric.value}</p>
                         <p className="text-xs text-[#6B9FF0] font-bold uppercase tracking-widest opacity-80">{metric.label}</p>
                         </div>
                     ))}

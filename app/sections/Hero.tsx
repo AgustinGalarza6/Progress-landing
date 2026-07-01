@@ -13,12 +13,12 @@ export default function Hero() {
     return (
         <section
             id="inicio"
-            className="relative min-h-[90vh] flex flex-col overflow-hidden pt-24"
+            className="relative min-h-[90vh] flex flex-col overflow-hidden pt-36 md:pt-24"
             style={{ background: "url(/background/hero_background.jpg) center/cover no-repeat, #0a0a0a" }}
         >
             <div className="absolute inset-0 bg-black/35" />
 
-            <div className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 text-center max-w-7xl mx-auto">
+            <div className="relative z-10 flex-grow flex flex-col items-center justify-start md:justify-center px-4 pb-12 text-center max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

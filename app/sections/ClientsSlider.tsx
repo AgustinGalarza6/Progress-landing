@@ -7,9 +7,6 @@ type ClientLogo = {
     name: string;
     url: string;
     alt: string;
-    maxWidth: string;
-    maxHeight: string;
-    clipPath?: string;
 };
 
 const logos: ClientLogo[] = [
@@ -17,44 +14,31 @@ const logos: ClientLogo[] = [
         name: "Sakya Tec",
         url: "/clients_slider/sakya_tec.png",
         alt: "Logo de Sakya Tec",
-        maxWidth: "128px",
-        maxHeight: "72px",
     },
     {
-        name: "Comahue",
+        name: "Comahue Seguridad",
         url: "/clients_slider/comahue_alarmas.png",
-        alt: "Logo de Comahue Alarmas",
-        maxWidth: "104px",
-        maxHeight: "72px",
+        alt: "Logo de Comahue Seguridad",
     },
     {
         name: "YPF",
-        url: "/clients_slider/ypf.svg",
+        url: "/clients_slider/ypf.png",
         alt: "Logo de YPF",
-        maxWidth: "128px",
-        maxHeight: "58px",
     },
     {
         name: "Mostaza",
         url: "/clients_slider/mostaza.png",
         alt: "Logo de Mostaza",
-        maxWidth: "116px",
-        maxHeight: "70px",
     },
     {
         name: "Hospital Británico",
-        url: "/clients_slider/hospital-britanico.webp",
+        url: "/clients_slider/hospital-britanico.png",
         alt: "Logo de Hospital Británico",
-        maxWidth: "190px",
-        maxHeight: "58px",
     },
     {
         name: "CableVisión",
         url: "/clients_slider/cablevision.png",
         alt: "Logo de CableVisión",
-        maxWidth: "140px",
-        maxHeight: "66px",
-        clipPath: "inset(28% 5% 28% 5%)",
     },
 ];
 
@@ -87,19 +71,12 @@ export default function ClientsSlider() {
                     {repeatedLogos.map((logo, index) => (
                         <div
                             key={`${logo.name}-${index}`}
-                            className="flex h-24 w-44 flex-shrink-0 items-center justify-center overflow-hidden md:w-56"
+                            className="flex h-44 w-64 flex-shrink-0 items-center justify-center overflow-hidden md:h-52 md:w-80"
                         >
                             <img
                                 src={logo.url}
                                 alt={logo.alt}
-                                className="block object-contain"
-                                style={{
-                                    width: "auto",
-                                    height: "auto",
-                                    maxWidth: logo.maxWidth,
-                                    maxHeight: logo.maxHeight,
-                                    clipPath: logo.clipPath,
-                                }}
+                                className="block h-full w-auto object-contain"
                             />
                         </div>
                     ))}

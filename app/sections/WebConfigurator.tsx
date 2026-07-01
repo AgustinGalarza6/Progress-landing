@@ -81,18 +81,18 @@ export default function WebConfigurator() {
   };
 
   return (
-    <div id="desarrollo-web" className="py-24 px-4">
+    <div id="desarrollo-web" className="py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16 max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-normal leading-tight text-white">
+        <div className="mb-10 md:mb-16 max-w-2xl">
+          <h2 className="text-[34px] md:text-5xl font-normal leading-tight text-white">
             ¿Tu web anda lenta o su diseño quedó en el tiempo?<br />
             <span style={{ color: PRIMARY }} className="font-normal">Tenemos la solución para vos</span>
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
           <div className="lg:w-2/3 space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
               {WEB_PLANS.map((plan) => {
                 const isSelected = selectedPlan === plan.id;
                 const isPopular = plan.id === "gold";
@@ -100,8 +100,8 @@ export default function WebConfigurator() {
                   <button
                     key={plan.id}
                     onClick={() => setSelectedPlan(plan.id)}
-                    className={`relative flex flex-col text-left rounded-[2rem] p-8 transition-all duration-200 border-2 
-                      ${isSelected ? "border-[#6B9FF0] bg-[#101624] shadow-lg scale-[1.03] z-10" : "border-[#232b3b] bg-[#181e2a] hover:border-[#6B9FF0]/40 shadow-sm"}
+                    className={`relative flex flex-col text-left rounded-[2rem] p-6 md:p-7 xl:p-8 transition-all duration-200 border-2 
+                      ${isSelected ? "border-[#6B9FF0] bg-[#101624] shadow-lg sm:scale-[1.02] z-10" : "border-[#232b3b] bg-[#181e2a] hover:border-[#6B9FF0]/40 shadow-sm"}
                     `}
                     style={isSelected ? { boxShadow: "0 8px 32px 0 #6B9FF033" } : {}}
                   >
@@ -120,7 +120,7 @@ export default function WebConfigurator() {
                       <span style={{ color: isSelected ? "#fff" : "#e6eaf3" }} className="font-medium">{plan.name.replace("WEB PLAN ", "").replace(/^[^ ]+ /, "")}</span>
                     </h3>
 
-                    <div className="flex items-baseline gap-1 mt-8 mb-8">
+                    <div className="flex items-baseline gap-1 mt-6 md:mt-8 mb-6 md:mb-8">
                       <span className="text-4xl font-medium leading-none" style={{ color: isSelected ? "#fff" : "#6B9FF0" }}>${plan.price}</span>
                       <span className="text-lg ml-1" style={{ color: isSelected ? "#b6d3ff" : "#6B9FF0AA" }}>USD</span>
                     </div>
@@ -138,7 +138,7 @@ export default function WebConfigurator() {
               })}
             </div>
 
-            <div className="rounded-[2rem] p-10 border-2 border-[#6B9FF0] bg-[#101624] shadow-lg font-sans">
+            <div className="rounded-[2rem] p-6 md:p-10 border-2 border-[#6B9FF0] bg-[#101624] shadow-lg font-sans">
               <h3 className="text-xl font-medium mb-8" style={{ color: PRIMARY }}>
                 Servicios adicionales
               </h3>
@@ -146,7 +146,7 @@ export default function WebConfigurator() {
                 {ADD_ONS.map((addon) => {
                   const isOn = selectedAddOns.includes(addon.id);
                   return (
-                    <div key={addon.id} className="flex items-center justify-between py-6 border-b border-[#232b3b] last:border-0">
+                    <div key={addon.id} className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between py-6 border-b border-[#232b3b] last:border-0">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style={{ background: "#181e2a" }}>
                           <span style={{ color: PRIMARY }}>{addon.id === 'domain' ? <Globe className="w-4 h-4" /> : addon.id === 'hosting' ? <Server className="w-4 h-4" /> : <ShieldCheck className="w-4 h-4" />}</span>
@@ -156,7 +156,7 @@ export default function WebConfigurator() {
                           <p className="text-xs mt-0.5" style={{ color: "#8fafc8" }}>{addon.description}</p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-6">
+                      <div className="flex items-center justify-between gap-6 sm:justify-end">
                         <span className="font-medium text-sm whitespace-nowrap" style={{ color: PRIMARY }}>${addon.price.toLocaleString("en-US")} USD</span>
                         <ToggleSwitch checked={isOn} onChange={() => toggleAddOn(addon.id)} />
                       </div>
@@ -168,7 +168,7 @@ export default function WebConfigurator() {
           </div>
 
           <div className="lg:w-1/3 lg:sticky lg:top-8">
-            <div className="rounded-[2.5rem] p-10 border-2 border-[#6B9FF0] bg-[#101624] shadow-lg font-sans">
+            <div className="rounded-[2.5rem] p-6 md:p-10 border-2 border-[#6B9FF0] bg-[#101624] shadow-lg font-sans">
               <h3 className="text-2xl font-medium mb-8" style={{ color: "#ffffff" }}>Resumen de la consulta</h3>
 
               <div className="space-y-5 mb-10 pb-10 border-b border-white/10">
@@ -191,14 +191,14 @@ export default function WebConfigurator() {
               <div className="space-y-2 mb-10">
                 <div className="flex justify-between items-end">
                   <span className="text-lg" style={{ color: "rgba(255,255,255,0.85)" }}>Total estimado</span>
-                  <span className="text-4xl font-black" style={{ color: "#ffffff" }}>${totalPrice.toLocaleString("en-US")} USD</span>
+                  <span className="text-3xl md:text-4xl font-black" style={{ color: "#ffffff" }}>${totalPrice.toLocaleString("en-US")} USD</span>
                 </div>
                 <p className="text-xs text-right mt-2 text-gray-500">
                   Cotización en pesos a valor BNA del día de pago. Consultar cotización exacta antes de contratar.
                 </p>
               </div>
 
-              <button onClick={handleFinishOrder} className="w-full flex items-center justify-center gap-2 font-black text-lg py-5 rounded-full transition-all duration-200 hover:shadow-xl active:scale-95" style={{ background: "#ffffff", color: SECONDARY }}>
+              <button onClick={handleFinishOrder} className="w-full flex items-center justify-center gap-2 font-black text-base md:text-lg py-5 rounded-full transition-all duration-200 hover:shadow-xl active:scale-95" style={{ background: "#ffffff", color: SECONDARY }}>
                 Consultar por mi web
                 <ArrowRight className="w-5 h-5" />
               </button>

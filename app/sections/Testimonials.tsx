@@ -32,8 +32,8 @@ const testimonials = [
 export default function Testimonials() {
     // const { t } = useLanguage();
     return (
-        <section id="exito" className="py-24 relative bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
-            <div className="relative z-10 max-w-7xl mx-auto px-6 mb-16">
+        <section id="exito" className="py-20 md:py-24 relative bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 mb-12 md:mb-16">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function Testimonials() {
                     <span className="text-gray-400 text-sm font-light mb-4 block uppercase tracking-widest">
                         TESTIMONIOS
                     </span>
-                    <h2 className="text-[40px] md:text-[56px] font-normal text-white leading-tight tracking-tight">
+                    <h2 className="text-[34px] md:text-[56px] font-normal text-white leading-tight tracking-tight">
                         Experiencias de clientes que confiaron <br />
                         <span>en nuestro equipo</span>
                     </h2>
@@ -53,7 +53,7 @@ export default function Testimonials() {
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={30}
-                    slidesPerView={1.2}
+                    slidesPerView={1.05}
                     loop={true}
                     speed={900}
                     autoplay={{ delay: 4800, disableOnInteraction: false }}
@@ -66,10 +66,10 @@ export default function Testimonials() {
                 >
                     {testimonials.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <div className="bg-[#141414] border border-white/[0.05] rounded-2xl p-8 md:p-10 flex flex-col h-full min-h-[380px] transition-all duration-300 hover:border-[#6B9FF0]/40">
+                            <div className="bg-[#141414] border border-white/[0.05] rounded-2xl p-6 md:p-10 flex flex-col h-full min-h-[340px] md:min-h-[380px] transition-all duration-300 hover:border-[#6B9FF0]/40">
                                 <div className="text-5xl text-[#6B9FF0]/10 font-serif leading-none mb-6">«</div>
                                 <div className="flex-grow">
-                                    <p className="text-gray-300 text-lg leading-relaxed font-light mb-8 italic">
+                                    <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light mb-8 italic">
                                         {item.content}
                                     </p>
                                 </div>

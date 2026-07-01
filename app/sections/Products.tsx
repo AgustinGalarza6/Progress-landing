@@ -17,7 +17,7 @@ const products = [
 
 export default function Products() {
     return (
-        <section id="productos" className="py-24 relative bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
+        <section id="productos" className="py-20 md:py-24 relative bg-[#0a0a0a] overflow-hidden font-sans border-t border-white/5">
             <div className="absolute inset-0 opacity-[0.18] pointer-events-none"
                 style={{
                     backgroundImage: `linear-gradient(#ffffff15 1px, transparent 1px), linear-gradient(90deg, #ffffff15 1px, transparent 1px)`,
@@ -26,7 +26,7 @@ export default function Products() {
             />
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
-                <div className="max-w-3xl mb-16">
+                <div className="max-w-3xl mb-12 md:mb-16">
                     <motion.span
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function Products() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
-                        className="text-[40px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6"
+                        className="text-[34px] md:text-[56px] font-light text-white leading-tight tracking-tight mb-6"
                     >
                         Soluciones listas para operar <br />
                         <span className="text-[#6B9FF0] font-normal">con tecnología escalable</span>
@@ -62,14 +62,14 @@ export default function Products() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: index * 0.08 }}
-                            className="group relative min-h-[260px] bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 hover:border-[#6B9FF0] transition-all duration-300 flex flex-col justify-between text-left overflow-hidden"
+                            className="group relative min-h-[230px] md:min-h-[260px] bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 md:p-8 hover:border-[#6B9FF0] transition-all duration-300 flex flex-col justify-between text-left overflow-hidden"
                         >
                             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                             <div>
                                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B9FF0] mb-5">
                                     Producto PIL
                                 </p>
-                                <h3 className="text-3xl md:text-4xl font-normal text-white mb-5 tracking-tight transition-colors duration-300 group-hover:text-[#6B9FF0]">
+                                <h3 className="text-2xl md:text-4xl font-normal text-white mb-5 tracking-tight transition-colors duration-300 group-hover:text-[#6B9FF0]">
                                     {product.name}
                                 </h3>
                                 <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
