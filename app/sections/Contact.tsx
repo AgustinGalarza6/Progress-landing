@@ -10,6 +10,8 @@ const contactBenefits = [
     "Orientación técnica y comercial",
 ];
 
+const WHATSAPP_URL = "https://wa.me/5491138923268";
+
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: "",
@@ -21,26 +23,28 @@ export default function Contact() {
 
     const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('loading');
-        try{
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
-            });
-            const json = await res.json();
-            if(res.ok && json.ok){
-                setStatus('success');
-                setFormData({ name: '', email: '', company: '', type: 'Sistema a medida', message: '' });
-            }else{
-                setStatus('error');
-            }
-        }catch(err){
-            console.error(err);
+
+        if (!formData.name || !formData.email || !formData.type || !formData.message) {
             setStatus('error');
+            return;
         }
+
+        const message = [
+            `Hola, soy ${formData.name}.`,
+            `Quiero consultar por ${formData.type}.`,
+            `Email: ${formData.email}.`,
+            formData.company ? `Empresa: ${formData.company}.` : null,
+            `Mensaje: ${formData.message}.`,
+        ]
+            .filter(Boolean)
+            .join(" ");
+
+        window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+        setStatus('success');
+        setFormData({ name: '', email: '', company: '', type: 'Sistema a medida', message: '' });
     };
 
     return (
@@ -187,7 +191,7 @@ export default function Contact() {
                     <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
 
-                {status === 'success' && <p className="text-sm text-green-400 mt-2">Mensaje enviado. Te contactamos pronto.</p>}
+                {status === 'success' && <p className="text-sm text-green-400 mt-2">Se abrió WhatsApp para enviar tu consulta.</p>}
                 {status === 'error' && <p className="text-sm text-red-400 mt-2">Error al enviar. Intenta nuevamente más tarde.</p>}
                 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pt-2">
