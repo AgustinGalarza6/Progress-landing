@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = new URL("https://progressinline.com");
@@ -8,11 +7,7 @@ const title = "Progress in Line | Software a medida, integración y automatizaci
 const description =
   "Desarrollamos software a medida, integramos sistemas y automatizamos procesos para empresas que buscan escalar su operación con soluciones digitales robustas.";
 
-const hostGrotesk = Host_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-host",
-});
+const fontStack = '"Host Grotesk", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -105,7 +100,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${hostGrotesk.variable} font-sans bg-black text-white antialiased`}>
+      <body
+        className="font-sans bg-black text-white antialiased"
+        style={{ "--font-host": fontStack } as React.CSSProperties}
+      >
         {children}
 
         <script
