@@ -7,11 +7,25 @@ const products = [
         name: "PIL Access",
         description:
             "Solución para control de accesos, gestión de visitantes, turnos y operaciones internas con trazabilidad centralizada.",
+        isComingSoon: false,
     },
     {
         name: "PIL Soft",
         description:
             "Software de gestión adaptable para empresas que necesitan digitalizar procesos específicos, ordenar información y mejorar la operación diaria.",
+        isComingSoon: true,
+    },
+    {
+        name: "PIL Sync",
+        description:
+            "E-commerce integrado a tu software para conectar ventas online, stock, pedidos y procesos internos.",
+        isComingSoon: true,
+    },
+    {
+        name: "PIL Totem",
+        description:
+            "Terminal interactiva para atención, autogestión, turnos o consultas internas, pensada para mejorar la experiencia operativa en espacios físicos.",
+        isComingSoon: false,
     },
 ];
 
@@ -62,13 +76,20 @@ export default function Products() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: index * 0.08 }}
-                            className="group relative min-h-[230px] md:min-h-[260px] bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 md:p-8 hover:border-[#6B9FF0] transition-all duration-300 flex flex-col justify-between text-left overflow-hidden"
+                            className="group relative h-full min-h-[280px] bg-black/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 md:p-8 hover:border-[#6B9FF0] transition-all duration-300 flex flex-col justify-between text-left overflow-hidden"
                         >
                             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                             <div>
-                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B9FF0] mb-5">
-                                    Producto PIL
-                                </p>
+                                <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B9FF0]">
+                                        Producto PIL
+                                    </p>
+                                    {product.isComingSoon && (
+                                        <span className="rounded-full border border-[#6B9FF0]/25 bg-[#6B9FF0]/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-[#9bbcf3]">
+                                            Próximamente
+                                        </span>
+                                    )}
+                                </div>
                                 <h3 className="text-2xl md:text-4xl font-normal text-white mb-5 tracking-tight transition-colors duration-300 group-hover:text-[#6B9FF0]">
                                     {product.name}
                                 </h3>

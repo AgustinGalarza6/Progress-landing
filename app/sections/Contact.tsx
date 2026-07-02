@@ -49,10 +49,6 @@ export default function Contact() {
 
     return (
         <section id="contacto" className="py-20 md:py-32 relative overflow-hidden bg-black">
-        {/* Background Elements - Coherencia con CTA */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#6B9FF0]/10 rounded-full blur-[128px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4A7EDF]/10 rounded-full blur-[128px]" />
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             
