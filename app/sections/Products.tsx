@@ -19,7 +19,7 @@ const products = [
         name: "PIL Sync",
         description:
             "E-commerce integrado a tu software para conectar ventas online, stock, pedidos y procesos internos.",
-        isComingSoon: true,
+        isComingSoon: false,
     },
     {
         name: "PIL Totem",
